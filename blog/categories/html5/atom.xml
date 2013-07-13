@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | The 5 Minute Website Setup Blog]]></title>
   <link href="http://guido4000.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
-  <updated>2013-07-13T10:26:26+02:00</updated>
+  <updated>2013-07-13T10:37:39+02:00</updated>
   <id>http://guido4000.github.io/</id>
   <author>
     <name><![CDATA[Guido]]></name>
@@ -18,7 +18,9 @@
     <link href="http://guido4000.github.io/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes/"/>
     <updated>2013-07-13T10:16:00+02:00</updated>
     <id>http://guido4000.github.io/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes</id>
-    <content type="html"><![CDATA[<h1>The 3 Minute Setup Guideline</h1>
+    <content type="html"><![CDATA[<p><img class="<a" src="href="http://placekitten.com/890/280">http://placekitten.com/890/280</a>"></p>
+
+<h1>The 3 Minute Setup Guideline</h1>
 
 <p>boot up an EC2 instance with a node webserver and an HTML5 template in minutes</p>
 
