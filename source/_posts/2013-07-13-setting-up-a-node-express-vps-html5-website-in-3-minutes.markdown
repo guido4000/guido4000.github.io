@@ -6,6 +6,8 @@ comments: true
 categories: [Node, HTML5, Express]
 ---
 
+{% img http://placekitten.com/890/280 %}
+
 The 3 Minute Setup Guideline
 ============================
 

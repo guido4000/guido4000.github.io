@@ -4,7 +4,7 @@
 
 url: http://guido4000.github.io
 title: The 5 Minute Website Setup Blog
-subtitle: get it going in a snap
+subtitle: get it going in 5 minutes - or less
 author: Guido
 simple_search: http://google.com/search
 description: Guides for setting up websites in 5 minutes
@@ -78,7 +78,7 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
+googleplus_user: 109861750849095935081
 googleplus_hidden: false
 
 # Pinboard
