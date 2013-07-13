@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://guido4000.github.io/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
-  <updated>2013-07-13T09:55:37+02:00</updated>
+  <updated>2013-07-13T10:01:48+02:00</updated>
   <id>http://guido4000.github.io/</id>
   <author>
     <name><![CDATA[Guido]]></name>
@@ -20,21 +20,19 @@
     <id>http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github</id>
     <content type="html"><![CDATA[<h2>The 5 Minute Setup Guideline</h2>
 
-<h3>1. get octopress</h3>
+<h3>1. Get octopress</h3>
 
 <p><a href="http://octopress.org/docs/setup/">octopress setup</a></p>
 
-<ul>
-<li>clone repo</li>
-<li>rake install</li>
-</ul>
+<pre><code>+ clone repo
++ rake install
+</code></pre>
 
-
-<h3>2. setup github page</h3>
+<h3>2. Setup your github page</h3>
 
 <p><a href="http://octopress.org/docs/deploying/github/">octopress github setup</a></p>
 
-<h3>3. deploy</h3>
+<h3>3. Deploy</h3>
 
 <pre><code>$ rake setup_github_pages
 
@@ -42,11 +40,31 @@ $ rake generate
 $ rake deploy
 </code></pre>
 
-<h3>4. commit your code</h3>
+<h3>4. Commit your code</h3>
 
-<p>git add .
-git commit -m &ldquo;initial deploy&rdquo;
-git push origin source</p>
+<pre><code>$ git add .
+$ git commit -m "initial deploy"
+$ git push origin source
+</code></pre>
+
+<h3>5. Configure your blog</h3>
+
+<p><a href="http://octopress.org/docs/configuring/">octopress configure</a></p>
+
+<h3>6. Create a blog post</h3>
+
+<p><a href="http://octopress.org/docs/blogging/">octopress configure</a></p>
+
+<pre><code>$ rake new_post["title"]
+</code></pre>
+
+<h3>7. Check it out</h3>
+
+<pre><code>$ rake generate
+
+Local: $ rake preview
+Github: $ rake deploy
+</code></pre>
 ]]></content>
   </entry>
   
