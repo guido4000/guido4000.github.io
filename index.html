@@ -9,8 +9,8 @@
   <meta name="author" content="Guido">
 
   
-  <meta name="description" content="This is my first blog post
-">
+  <meta name="description" content="The 5 Minute Setup Guideline 1. get octopress octopress setup clone repo
+rake install 2. setup github page octopress github setup 3. deploy $ rake &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,7 +95,35 @@
   </header>
 
 
-  <div class="entry-content"><h2>This is my first blog post</h2>
+  <div class="entry-content"><h2>The 5 Minute Setup Guideline</h2>
+
+<h3>1. get octopress</h3>
+
+<p><a href="http://octopress.org/docs/setup/">octopress setup</a></p>
+
+<ul>
+<li>clone repo</li>
+<li>rake install</li>
+</ul>
+
+
+<h3>2. setup github page</h3>
+
+<p><a href="http://octopress.org/docs/deploying/github/">octopress github setup</a></p>
+
+<h3>3. deploy</h3>
+
+<pre><code>$ rake setup_github_pages
+
+$ rake generate
+$ rake deploy
+</code></pre>
+
+<h3>4. commit your code</h3>
+
+<p>git add .
+git commit -m &ldquo;initial deploy&rdquo;
+git push origin source</p>
 </div>
   
   
