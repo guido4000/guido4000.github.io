@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://guido4000.github.io/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
-  <updated>2013-07-13T09:22:24+02:00</updated>
+  <updated>2013-07-13T09:39:48+02:00</updated>
   <id>http://guido4000.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up a Jeykyll Octopress Blog hosted on github]]></title>
+    <link href="http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github/"/>
+    <updated>2013-07-13T09:34:00+02:00</updated>
+    <id>http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github</id>
+    <content type="html"><![CDATA[<h2>This is my first blog post</h2>
+]]></content>
+  </entry>
   
 </feed>
