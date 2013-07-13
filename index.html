@@ -102,67 +102,12 @@
 
 <p>Free 30 minute one click server <a href="http://www.instantserver.io">http://www.instantserver.io</a></p>
 
-<p>For a more permanent solution check out <a href="https://www.digitalocean.com">https://www.digitalocean.com</a></p>
-
-<h2>2. Install node for ubuntu</h2>
-
-<p>Reference <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint">https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint</a></p>
-
-<pre><code>$ sudo apt-get update
-$ sudo apt-get install python-software-properties python g++ make
-optional $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:chris-lea/node.js
-$ sudo apt-get update
-$ sudo apt-get install nodejs
-</code></pre>
-
-<h2>3. Install connect</h2>
-
-<p><a href="http://stackoverflow.com/questions/6084360/node-js-as-a-simple-web-server">http://stackoverflow.com/questions/6084360/node-js-as-a-simple-web-server</a></p>
-
-<p>a) Install connect with NPM</p>
-
-<pre><code>$ npm install connect
-</code></pre>
-
-<p>b) Create server.js file with this content:</p>
-
-<pre><code>var connect = require('connect');
-connect.createServer(
-    connect.static(__dirname)
-).listen(8080);
-</code></pre>
-
-<p>c) Run with NodeJS</p>
-
-<pre><code>$ node server.js
-</code></pre>
-
-<h2>4. Copy HTML5 Boilerplate</h2>
-
-<p><a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a></p>
-
-<p>Download boilerplate and copy to server</p>
-
-<h2>5. Open Website</h2>
-
-<p>Open up the server IP in the browser on port 8080</p>
-
-<p>Done!</p>
-
-<h2>6. Run the server forever</h2>
-
-<pre><code>$ npm install forever -g
-$ forever start -l forever.log -o out.log -e err.log server.js 
-</code></pre>
-
-<p>Make forever start script on reboot</p>
-
-<pre><code>$ crontab -u root -e 
-    @reboot /usr/lib/node_modules/forever/bin/forever start /root/server.js 
-</code></pre>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -198,7 +143,7 @@ $ forever start -l forever.log -o out.log -e err.log server.js
 
   <div class="entry-content"><h1>The 5 Minute Setup Guideline</h1>
 
-<h3>1. Get octopress</h3>
+<h3>1. Get and install Octopress</h3>
 
 <pre><code>$ git clone git://github.com/imathis/octopress.git octopress
 $ ruby --version # should report Ruby 1.9.3
@@ -208,62 +153,12 @@ $ bundle install
 $ rake install
 </code></pre>
 
-<p>Link: <a href="http://octopress.org/docs/setup/">Octopress setup</a></p>
-
-<h3>2. Setup your github page</h3>
-
-<p>Create a new repository <a href="https://github.com/repositories/new">Github</a></p>
-
-<p>Autoconfigure:</p>
-
-<pre><code>$ rake setup_github_pages
-</code></pre>
-
-<p>Link: <a href="http://octopress.org/docs/deploying/github/">Octopress github setup</a></p>
-
-<h3>3. Deploy</h3>
-
-<pre><code>$ rake setup_github_pages
-
-$ rake generate
-$ rake deploy
-</code></pre>
-
-<h3>4. Commit your code</h3>
-
-<pre><code>$ git add .
-$ git commit -m "initial deploy"
-$ git push origin source
-</code></pre>
-
-<h3>5. Configure your blog</h3>
-
-<p>The main config files</p>
-
-<pre><code>_config.yml # Main config (Jekyll's settings)
-Rakefile # Configs for deployment
-config.rb # Compass config
-config.ru # Rack config
-</code></pre>
-
-<p><a href="http://octopress.org/docs/configuring/">Octopress configure</a></p>
-
-<h3>6. Create a blog post</h3>
-
-<pre><code>$ rake new_post["title"]
-</code></pre>
-
-<p><a href="http://octopress.org/docs/blogging/">Octopress blogging</a></p>
-
-<h3>7. Check it out</h3>
-
-<pre><code>$ rake generate
-
-Local: $ rake preview
-Github: $ rake deploy
-</code></pre>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github/">Read on &rarr;</a>
+    </footer>
   
 
 

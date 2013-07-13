@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | The 5 Minute Website Setup Blog]]></title>
   <link href="http://guido4000.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
-  <updated>2013-07-13T10:22:09+02:00</updated>
+  <updated>2013-07-13T10:26:26+02:00</updated>
   <id>http://guido4000.github.io/</id>
   <author>
     <name><![CDATA[Guido]]></name>
@@ -25,6 +25,9 @@
 <h2>1. Get EC2 instance with one click</h2>
 
 <p>Free 30 minute one click server <a href="http://www.instantserver.io">http://www.instantserver.io</a></p>
+
+<!-- more -->
+
 
 <p>For a more permanent solution check out <a href="https://www.digitalocean.com">https://www.digitalocean.com</a></p>
 
@@ -95,7 +98,7 @@ $ forever start -l forever.log -o out.log -e err.log server.js
     <id>http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github</id>
     <content type="html"><![CDATA[<h1>The 5 Minute Setup Guideline</h1>
 
-<h3>1. Get octopress</h3>
+<h3>1. Get and install Octopress</h3>
 
 <pre><code>$ git clone git://github.com/imathis/octopress.git octopress
 $ ruby --version # should report Ruby 1.9.3
@@ -104,6 +107,9 @@ $ rbenv hash
 $ bundle install
 $ rake install
 </code></pre>
+
+<!-- more -->
+
 
 <p>Link: <a href="http://octopress.org/docs/setup/">Octopress setup</a></p>
 
@@ -152,7 +158,12 @@ config.ru # Rack config
 
 <p><a href="http://octopress.org/docs/blogging/">Octopress blogging</a></p>
 
-<h3>7. Check it out</h3>
+<h3>7. Create a page</h3>
+
+<pre><code>$ rake new_page[super-awesome]
+</code></pre>
+
+<h3>8. Check it out</h3>
 
 <pre><code>$ rake generate
 

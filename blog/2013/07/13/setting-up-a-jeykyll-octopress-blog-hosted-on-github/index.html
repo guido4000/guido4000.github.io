@@ -9,8 +9,8 @@
   <meta name="author" content="Guido">
 
   
-  <meta name="description" content="The 5 Minute Setup Guideline 1. Get octopress $ git clone git://github.com/imathis/octopress.git octopress
-$ ruby --version # should report Ruby 1.9. &hellip;">
+  <meta name="description" content="The 5 Minute Setup Guideline 1. Get and install Octopress $ git clone git://github.com/imathis/octopress.git octopress
+$ ruby --version # should &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,7 +94,7 @@ $ ruby --version # should report Ruby 1.9. &hellip;">
 
 <div class="entry-content"><h1>The 5 Minute Setup Guideline</h1>
 
-<h3>1. Get octopress</h3>
+<h3>1. Get and install Octopress</h3>
 
 <pre><code>$ git clone git://github.com/imathis/octopress.git octopress
 $ ruby --version # should report Ruby 1.9.3
@@ -103,6 +103,9 @@ $ rbenv hash
 $ bundle install
 $ rake install
 </code></pre>
+
+<!-- more -->
+
 
 <p>Link: <a href="http://octopress.org/docs/setup/">Octopress setup</a></p>
 
@@ -151,7 +154,12 @@ config.ru # Rack config
 
 <p><a href="http://octopress.org/docs/blogging/">Octopress blogging</a></p>
 
-<h3>7. Check it out</h3>
+<h3>7. Create a page</h3>
+
+<pre><code>$ rake new_page[super-awesome]
+</code></pre>
+
+<h3>8. Check it out</h3>
 
 <pre><code>$ rake generate
 
