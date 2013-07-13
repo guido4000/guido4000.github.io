@@ -4,7 +4,7 @@
   <title><![CDATA[The 5 Minute Website Setup Blog]]></title>
   <link href="http://guido4000.github.io/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
-  <updated>2013-07-13T10:45:47+02:00</updated>
+  <updated>2013-07-13T15:37:15+02:00</updated>
   <id>http://guido4000.github.io/</id>
   <author>
     <name><![CDATA[Guido]]></name>
@@ -12,6 +12,96 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Music Streaming Server Setup in Minutes]]></title>
+    <link href="http://guido4000.github.io/blog/2013/07/13/music-streaming-server-setup-in-minutes/"/>
+    <updated>2013-07-13T15:34:00+02:00</updated>
+    <id>http://guido4000.github.io/blog/2013/07/13/music-streaming-server-setup-in-minutes</id>
+    <content type="html"><![CDATA[<h1>The 10 Minute Setup Guideline</h1>
+
+<p>for setting up CherryMusic on Arch Linux</p>
+
+<h2>1. Create Arch Linux System on DigitalOcean</h2>
+
+<p>Create account on <a href="http://www.digitalocean.com/">DitialOcean</a></p>
+
+<p>Upload your public key (just for convenience)</p>
+
+<p>Create an Arch Linux 64bit Droplet</p>
+
+<p>Connect:</p>
+
+<pre><code>$ ssh root@[yourdropletip] 
+</code></pre>
+
+<h2>2. Configure user</h2>
+
+<p>Create user:</p>
+
+<pre><code>$ useradd serv
+$ passwd serv
+</code></pre>
+
+<p>Prevent SSH login for root</p>
+
+<pre><code>$ nano /etc/ssh/sshd_config  # uncomment PermitRootLogin no
+</code></pre>
+
+<h2>3. Install dependencies</h2>
+
+<p>Ensure base-devel is installed:</p>
+
+<pre><code>$ pacman -S base-revel
+</code></pre>
+
+<p>Install packages</p>
+
+<pre><code>$ pacman -Scc
+$ pacman -Syy
+$ pacman -S imagemagick
+$ pacman -S python
+$ pacman -S python-cherrypy
+$ pacman -S ffmpeg
+$ pacman -S lame
+$ pacman -S vorbis-tools
+$ pacman -S sqlite3
+</code></pre>
+
+<h2>4. Install app</h2>
+
+<p>Install package:
+<a href="https://aur.archlinux.org/packages/cherrymusic/">https://aur.archlinux.org/packages/cherrymusic/</a></p>
+
+<pre><code>$ mkdir builds
+$ cd builds
+$ curl -O https://aur.archlinux.org/packages/ch/cherrymusic/cherrymusic.tar.gz
+$ tar -xzf cherrymusic.tar.gz
+$ makepkg -s
+$ pacman -U cherrymusic-0.25.2-1-any.pkg.tar.xz
+</code></pre>
+
+<h2>5. Configure app</h2>
+
+<p>Edit the conf file manually</p>
+
+<pre><code>/user/.config/cherrymusic/cherrymusic.conf
+</code></pre>
+
+<p>or run autoconfigure</p>
+
+<pre><code>$ cherrymusic --setup --port 8080
+</code></pre>
+
+<h2>6. Autorun daemon</h2>
+
+<p>Setup the autorun daemon for your user</p>
+
+<pre><code>$ sudo systemctl start cherrymusic@USER.service
+$ sudo systemctl enable cherrymusic@USER.service
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting up a Node Express VPS HTML5 Website in 3 Minutes]]></title>

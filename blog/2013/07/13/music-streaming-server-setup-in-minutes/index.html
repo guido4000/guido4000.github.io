@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Node - The 5 Minute Website Setup Blog</title>
+  <title>Music Streaming Server Setup in Minutes - The 5 Minute Website Setup Blog</title>
   <meta name="author" content="Guido">
 
   
-  <meta name="description" content="Category: Node">
+  <meta name="description" content="The 10 Minute Setup Guideline for setting up CherryMusic on Arch Linux 1. Create Arch Linux System on DigitalOcean Create account on DitialOcean &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://guido4000.github.ioblog/categories/node">
+  <link rel="canonical" href="http://guido4000.github.io/blog/2013/07/13/music-streaming-server-setup-in-minutes">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The 5 Minute Website Setup Blog" type="application/atom+xml">
@@ -64,35 +64,159 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Node</h1>
+    
+      <h1 class="entry-title">Music Streaming Server Setup in Minutes</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-13T15:34:00+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><h1>The 10 Minute Setup Guideline</h1>
 
-  
-  <h2>2013</h2>
+<p>for setting up CherryMusic on Arch Linux</p>
 
-<article>
-  
-<h1><a href="/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes/">Setting up a Node Express VPS HTML5 Website in 3 Minutes</a></h1>
-<time datetime="2013-07-13T10:16:00+02:00" pubdate><span class='month'>Jul</span> <span class='day'>13</span> <span class='year'>2013</span></time>
+<h2>1. Create Arch Linux System on DigitalOcean</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/express/'>Express</a>, <a class='category' href='/blog/categories/html5/'>HTML5</a>, <a class='category' href='/blog/categories/node/'>Node</a></span>
-</footer>
+<p>Create account on <a href="http://www.digitalocean.com/">DitialOcean</a></p>
 
+<p>Upload your public key (just for convenience)</p>
 
-</article>
+<p>Create an Arch Linux 64bit Droplet</p>
 
+<p>Connect:</p>
+
+<pre><code>$ ssh root@[yourdropletip] 
+</code></pre>
+
+<h2>2. Configure user</h2>
+
+<p>Create user:</p>
+
+<pre><code>$ useradd serv
+$ passwd serv
+</code></pre>
+
+<p>Prevent SSH login for root</p>
+
+<pre><code>$ nano /etc/ssh/sshd_config  # uncomment PermitRootLogin no
+</code></pre>
+
+<h2>3. Install dependencies</h2>
+
+<p>Ensure base-devel is installed:</p>
+
+<pre><code>$ pacman -S base-revel
+</code></pre>
+
+<p>Install packages</p>
+
+<pre><code>$ pacman -Scc
+$ pacman -Syy
+$ pacman -S imagemagick
+$ pacman -S python
+$ pacman -S python-cherrypy
+$ pacman -S ffmpeg
+$ pacman -S lame
+$ pacman -S vorbis-tools
+$ pacman -S sqlite3
+</code></pre>
+
+<h2>4. Install app</h2>
+
+<p>Install package:
+<a href="https://aur.archlinux.org/packages/cherrymusic/">https://aur.archlinux.org/packages/cherrymusic/</a></p>
+
+<pre><code>$ mkdir builds
+$ cd builds
+$ curl -O https://aur.archlinux.org/packages/ch/cherrymusic/cherrymusic.tar.gz
+$ tar -xzf cherrymusic.tar.gz
+$ makepkg -s
+$ pacman -U cherrymusic-0.25.2-1-any.pkg.tar.xz
+</code></pre>
+
+<h2>5. Configure app</h2>
+
+<p>Edit the conf file manually</p>
+
+<pre><code>/user/.config/cherrymusic/cherrymusic.conf
+</code></pre>
+
+<p>or run autoconfigure</p>
+
+<pre><code>$ cherrymusic --setup --port 8080
+</code></pre>
+
+<h2>6. Autorun daemon</h2>
+
+<p>Setup the autorun daemon for your user</p>
+
+<pre><code>$ sudo systemctl start cherrymusic@USER.service
+$ sudo systemctl enable cherrymusic@USER.service
+</code></pre>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Guido</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-13T15:34:00+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://guido4000.github.io/blog/2013/07/13/music-streaming-server-setup-in-minutes/" data-via="guidohoermann" data-counturl="http://guido4000.github.io/blog/2013/07/13/music-streaming-server-setup-in-minutes/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes/" title="Previous Post: Setting up a Node Express VPS HTML5 Website in 3 Minutes">&laquo; Setting up a Node Express VPS HTML5 Website in 3 Minutes</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

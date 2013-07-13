@@ -9,7 +9,7 @@
   <meta name="author" content="Guido">
 
   
-  <meta name="description" content="The 3 Minute Setup Guideline boot up an EC2 instance with a node webserver and an HTML5 template in minutes 1. Get EC2 instance with one click Free &hellip;">
+  <meta name="description" content="The 10 Minute Setup Guideline for setting up CherryMusic on Arch Linux 1. Create Arch Linux System on DigitalOcean Create account on DitialOcean &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -38,7 +38,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">The 5 Minute Website Setup Blog</a></h1>
   
-    <h2>get it going in a snap</h2>
+    <h2>get it going in 5 minutes - or less</h2>
   
 </hgroup>
 
@@ -65,6 +65,123 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/13/music-streaming-server-setup-in-minutes/">Music Streaming Server Setup in Minutes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-13T15:34:00+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>The 10 Minute Setup Guideline</h1>
+
+<p>for setting up CherryMusic on Arch Linux</p>
+
+<h2>1. Create Arch Linux System on DigitalOcean</h2>
+
+<p>Create account on <a href="http://www.digitalocean.com/">DitialOcean</a></p>
+
+<p>Upload your public key (just for convenience)</p>
+
+<p>Create an Arch Linux 64bit Droplet</p>
+
+<p>Connect:</p>
+
+<pre><code>$ ssh root@[yourdropletip] 
+</code></pre>
+
+<h2>2. Configure user</h2>
+
+<p>Create user:</p>
+
+<pre><code>$ useradd serv
+$ passwd serv
+</code></pre>
+
+<p>Prevent SSH login for root</p>
+
+<pre><code>$ nano /etc/ssh/sshd_config  # uncomment PermitRootLogin no
+</code></pre>
+
+<h2>3. Install dependencies</h2>
+
+<p>Ensure base-devel is installed:</p>
+
+<pre><code>$ pacman -S base-revel
+</code></pre>
+
+<p>Install packages</p>
+
+<pre><code>$ pacman -Scc
+$ pacman -Syy
+$ pacman -S imagemagick
+$ pacman -S python
+$ pacman -S python-cherrypy
+$ pacman -S ffmpeg
+$ pacman -S lame
+$ pacman -S vorbis-tools
+$ pacman -S sqlite3
+</code></pre>
+
+<h2>4. Install app</h2>
+
+<p>Install package:
+<a href="https://aur.archlinux.org/packages/cherrymusic/">https://aur.archlinux.org/packages/cherrymusic/</a></p>
+
+<pre><code>$ mkdir builds
+$ cd builds
+$ curl -O https://aur.archlinux.org/packages/ch/cherrymusic/cherrymusic.tar.gz
+$ tar -xzf cherrymusic.tar.gz
+$ makepkg -s
+$ pacman -U cherrymusic-0.25.2-1-any.pkg.tar.xz
+</code></pre>
+
+<h2>5. Configure app</h2>
+
+<p>Edit the conf file manually</p>
+
+<pre><code>/user/.config/cherrymusic/cherrymusic.conf
+</code></pre>
+
+<p>or run autoconfigure</p>
+
+<pre><code>$ cherrymusic --setup --port 8080
+</code></pre>
+
+<h2>6. Autorun daemon</h2>
+
+<p>Setup the autorun daemon for your user</p>
+
+<pre><code>$ sudo systemctl start cherrymusic@USER.service
+$ sudo systemctl enable cherrymusic@USER.service
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -179,6 +296,10 @@ $ rake install
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/13/music-streaming-server-setup-in-minutes/">Music Streaming Server Setup in Minutes</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes/">Setting Up a Node Express VPS HTML5 Website in 3 Minutes</a>
       </li>
     
@@ -219,6 +340,15 @@ $ rake install
 </section>
 
 
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/109861750849095935081?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
 
 
 
