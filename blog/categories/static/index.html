@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Setting up a Jeykyll Octopress Blog hosted on github - The 5 Minute Website Setup Blog</title>
+  <title>Category: Static - The 5 Minute Website Setup Blog</title>
   <meta name="author" content="Guido">
 
   
-  <meta name="description" content="The 5 Minute Setup Guideline 1. Get octopress $ git clone git://github.com/imathis/octopress.git octopress
-$ ruby --version # should report Ruby 1.9. &hellip;">
+  <meta name="description" content="Category: Static">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ $ ruby --version # should report Ruby 1.9. &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github">
+  <link rel="canonical" href="http://guido4000.github.ioblog/categories/static">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The 5 Minute Website Setup Blog" type="application/atom+xml">
@@ -65,149 +64,35 @@ $ ruby --version # should report Ruby 1.9. &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Setting Up a Jeykyll Octopress Blog Hosted on Github</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-13T09:34:00+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Static</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-<div class="entry-content"><h1>The 5 Minute Setup Guideline</h1>
 
-<h3>1. Get octopress</h3>
+  
+  <h2>2013</h2>
 
-<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
-$ ruby --version # should report Ruby 1.9.3
-$ gem install bundler
-$ rbenv hash
-$ bundle install
-$ rake install
-</code></pre>
+<article>
+  
+<h1><a href="/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github/">Setting up a Jeykyll Octopress Blog hosted on github</a></h1>
+<time datetime="2013-07-13T09:34:00+02:00" pubdate><span class='month'>Jul</span> <span class='day'>13</span> <span class='year'>2013</span></time>
 
-<p>Link: <a href="http://octopress.org/docs/setup/">Octopress setup</a></p>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/html5/'>HTML5</a>, <a class='category' href='/blog/categories/static/'>Static</a></span>
+</footer>
 
-<h3>2. Setup your github page</h3>
 
-<p>Create a new repository <a href="https://github.com/repositories/new">Github</a></p>
+</article>
 
-<p>Autoconfigure:</p>
-
-<pre><code>$ rake setup_github_pages
-</code></pre>
-
-<p>Link: <a href="http://octopress.org/docs/deploying/github/">Octopress github setup</a></p>
-
-<h3>3. Deploy</h3>
-
-<pre><code>$ rake setup_github_pages
-
-$ rake generate
-$ rake deploy
-</code></pre>
-
-<h3>4. Commit your code</h3>
-
-<pre><code>$ git add .
-$ git commit -m "initial deploy"
-$ git push origin source
-</code></pre>
-
-<h3>5. Configure your blog</h3>
-
-<p>The main config files</p>
-
-<pre><code>_config.yml # Main config (Jekyll's settings)
-Rakefile # Configs for deployment
-config.rb # Compass config
-config.ru # Rack config
-</code></pre>
-
-<p><a href="http://octopress.org/docs/configuring/">Octopress configure</a></p>
-
-<h3>6. Create a blog post</h3>
-
-<pre><code>$ rake new_post["title"]
-</code></pre>
-
-<p><a href="http://octopress.org/docs/blogging/">Octopress blogging</a></p>
-
-<h3>7. Check it out</h3>
-
-<pre><code>$ rake generate
-
-Local: $ rake preview
-Github: $ rake deploy
-</code></pre>
 </div>
 
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Guido</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-13T09:34:00+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/html5/'>HTML5</a>, <a class='category' href='/blog/categories/static/'>Static</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github/" data-via="guidohoermann" data-counturl="http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/07/13/setting-up-a-node-express-vps-html5-website-in-3-minutes/" title="Next Post: Setting up a Node Express VPS HTML5 Website in 3 Minutes">Setting up a Node Express VPS HTML5 Website in 3 Minutes &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
 </div>

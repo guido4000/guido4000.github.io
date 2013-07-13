@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[The 5 Minute Website Setup Blog]]></title>
-  <link href="http://guido4000.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Express | The 5 Minute Website Setup Blog]]></title>
+  <link href="http://guido4000.github.io/blog/categories/express/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
   <updated>2013-07-13T10:22:09+02:00</updated>
   <id>http://guido4000.github.io/</id>
@@ -84,80 +84,6 @@ $ forever start -l forever.log -o out.log -e err.log server.js
 
 <pre><code>$ crontab -u root -e 
     @reboot /usr/lib/node_modules/forever/bin/forever start /root/server.js 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting up a Jeykyll Octopress Blog hosted on github]]></title>
-    <link href="http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github/"/>
-    <updated>2013-07-13T09:34:00+02:00</updated>
-    <id>http://guido4000.github.io/blog/2013/07/13/setting-up-a-jeykyll-octopress-blog-hosted-on-github</id>
-    <content type="html"><![CDATA[<h1>The 5 Minute Setup Guideline</h1>
-
-<h3>1. Get octopress</h3>
-
-<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
-$ ruby --version # should report Ruby 1.9.3
-$ gem install bundler
-$ rbenv hash
-$ bundle install
-$ rake install
-</code></pre>
-
-<p>Link: <a href="http://octopress.org/docs/setup/">Octopress setup</a></p>
-
-<h3>2. Setup your github page</h3>
-
-<p>Create a new repository <a href="https://github.com/repositories/new">Github</a></p>
-
-<p>Autoconfigure:</p>
-
-<pre><code>$ rake setup_github_pages
-</code></pre>
-
-<p>Link: <a href="http://octopress.org/docs/deploying/github/">Octopress github setup</a></p>
-
-<h3>3. Deploy</h3>
-
-<pre><code>$ rake setup_github_pages
-
-$ rake generate
-$ rake deploy
-</code></pre>
-
-<h3>4. Commit your code</h3>
-
-<pre><code>$ git add .
-$ git commit -m "initial deploy"
-$ git push origin source
-</code></pre>
-
-<h3>5. Configure your blog</h3>
-
-<p>The main config files</p>
-
-<pre><code>_config.yml # Main config (Jekyll's settings)
-Rakefile # Configs for deployment
-config.rb # Compass config
-config.ru # Rack config
-</code></pre>
-
-<p><a href="http://octopress.org/docs/configuring/">Octopress configure</a></p>
-
-<h3>6. Create a blog post</h3>
-
-<pre><code>$ rake new_post["title"]
-</code></pre>
-
-<p><a href="http://octopress.org/docs/blogging/">Octopress blogging</a></p>
-
-<h3>7. Check it out</h3>
-
-<pre><code>$ rake generate
-
-Local: $ rake preview
-Github: $ rake deploy
 </code></pre>
 ]]></content>
   </entry>

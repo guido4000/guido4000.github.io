@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[The 5 Minute Website Setup Blog]]></title>
-  <link href="http://guido4000.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: HTML5 | The 5 Minute Website Setup Blog]]></title>
+  <link href="http://guido4000.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://guido4000.github.io/"/>
   <updated>2013-07-13T10:22:09+02:00</updated>
   <id>http://guido4000.github.io/</id>
