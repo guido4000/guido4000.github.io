@@ -6,11 +6,11 @@
 <head>
   <meta charset="utf-8">
   <title>Blog Archive - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Guido">
 
   
-  <meta name="description" content=" Blog Archive 2013 Setting up a Jeykyll Octopress Blog hosted on github
-Jul 13 2013 Recent Posts Setting Up a Jeykyll Octopress Blog Hosted on Github ">
+  <meta name="description" content="Blog Archive 2013 Setting up a Jeykyll Octopress Blog hosted on github
+Jul 13 2013 Recent Posts Setting Up a Jeykyll Octopress Blog Hosted on Github &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +107,35 @@ Jul 13 2013 Recent Posts Setting Up a Jeykyll Octopress Blog Hosted on Github ">
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/guido4000">@guido4000</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'guido4000',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
 
 
 
@@ -118,7 +147,7 @@ Jul 13 2013 Recent Posts Setting Up a Jeykyll Octopress Blog Hosted on Github ">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
+  Copyright &copy; 2013 - Guido -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
